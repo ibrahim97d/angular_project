@@ -1,0 +1,9 @@
+<!-- user-detail.html -->
+<div ng-controller="UserDetailCtrl" class="card">
+    <img ng-src="{{user.avatar}}" alt="{{user.first_name}}'s avatar" style="width:100px; float:left; margin-right:20px;">
+    <div>
+        <h4><b>{{user.first_name}} {{user.last_name}}</b></h4>
+        <p>{{user.email}}</p>
+    </div>
+    <div style="clear:both;"></div>
+</div>

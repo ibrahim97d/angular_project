@@ -1,0 +1,20 @@
+<!-- user-list.html -->
+<div ng-controller="UserListCtrl">
+    <h2>Users</h2>
+    <div ng-repeat="user in users" class="card" style="cursor:pointer;" ng-click="goToDetail(user.id)">
+        <img ng-src="{{user.avatar}}" alt="{{user.first_name}}'s avatar" style="width:100px; float:left; margin-right:20px;">
+        <div>
+            <h4><b>{{user.first_name}} {{user.last_name}}</b></h4>
+            <p>{{user.email}}</p>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <h3>Add New User</h3>
+    <form ng-submit="addUser()">
+        <input type="text" ng-model="newUser.first_name" placeholder="First Name" required>
+        <input type="text" ng-model="newUser.last_name" placeholder="Last Name" required>
+        <input type="email" ng-model="newUser.email" placeholder="Email" required>
+        <input type="submit" value="Add User">
+        </form>
+</div>
